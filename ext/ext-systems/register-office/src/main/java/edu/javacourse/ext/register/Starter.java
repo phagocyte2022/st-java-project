@@ -4,7 +4,6 @@ import edu.javacourse.ext.register.rest.MarriageController;
 import edu.javacourse.ext.register.view.MarriageRequest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.StaticApplicationContext;
 
 public class Starter {
     public static void main(String[] args) {
@@ -12,6 +11,7 @@ public class Starter {
             new String []{"springContext.xml"}
         );
 
+//        MarriageController controller = context.getBean(MarriageController.class);
         MarriageController controller = context.getBean("controller", MarriageController.class);
         controller.findMarriageCertificate(new MarriageRequest());
     }
