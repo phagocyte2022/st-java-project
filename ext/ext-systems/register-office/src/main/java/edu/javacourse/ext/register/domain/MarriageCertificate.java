@@ -7,7 +7,7 @@ import java.time.LocalDate;
 @Entity
 public class MarriageCertificate {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "marriage_certificate_id")
     private Long marriageCertificateId;
     @Column(name = "number_certificate")

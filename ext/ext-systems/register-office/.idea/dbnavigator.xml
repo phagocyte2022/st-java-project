@@ -20,9 +20,7 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="de799f32-ae6f-4a41-ba2b-5bdefbe2a8a9" object-ref="schemas/public/tables/ro_person" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="de799f32-ae6f-4a41-ba2b-5bdefbe2a8a9" dataset="public.ro_person" active-filter-id="83f2e2bf-2271-44b3-82c6-8bf83f122e99">
@@ -37,7 +35,7 @@
     <retain-sticky-names value="false" />
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
-    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/register_office.sql" connection-id="virtual-postgres-connection" session-id="" current-schema="" />
+    <mapping file-url="file://$PROJECT_DIR$/src/main/resources/register_office.sql" connection-id="virtual-postgres-connection" session-id="MAIN" current-schema="" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />
@@ -55,7 +53,7 @@
     <connections>
       <connection id="de799f32-ae6f-4a41-ba2b-5bdefbe2a8a9" active="true" signed="true">
         <database>
-          <name value="Connection 1" />
+          <name value="register_office" />
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
