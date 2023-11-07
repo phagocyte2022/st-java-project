@@ -3,6 +3,8 @@ package edu.javacourse.ext.register.business;
 import edu.javacourse.ext.register.dao.MarriageDao;
 import edu.javacourse.ext.register.dao.PersonDao;
 import edu.javacourse.ext.register.domain.MarriageCertificate;
+import edu.javacourse.ext.register.domain.Person;
+import edu.javacourse.ext.register.domain.PersonMale;
 import edu.javacourse.ext.register.view.MarriageRequest;
 import edu.javacourse.ext.register.view.MarriageResponse;
 import org.slf4j.Logger;
@@ -12,6 +14,9 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.time.LocalDate;
 
 @Service("marriageService")
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
@@ -24,13 +29,26 @@ public class MarriageManager {
     @Autowired
     private PersonDao personDao;
 
+    @Transactional()
     public MarriageResponse findMarriageCertificate(MarriageRequest request){
         LOGGER.info("findMarriageCertificate called");
 
         MarriageCertificate cert = marriageDao.findMarriageCertificate(request);
 
         personDao.findPersons();
+        personDao.addPerson(getPerson());
+        personDao.addPerson(getPerson());
+        personDao.addPerson(getPerson());
 
         return new MarriageResponse();
+    }
+
+    private static Person getPerson() {
+        Person m = new PersonMale();
+        m.setFirstName("1");
+        m.setLastName("2");
+        m.setPatronymic("3");
+        m.setDateOfBirth(LocalDate.of(1991, 3, 12));
+        return m;
     }
 }

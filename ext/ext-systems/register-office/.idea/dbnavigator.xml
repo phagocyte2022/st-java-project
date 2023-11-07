@@ -20,9 +20,16 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="de799f32-ae6f-4a41-ba2b-5bdefbe2a8a9" object-ref="schemas/public/tables/ro_person" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="de799f32-ae6f-4a41-ba2b-5bdefbe2a8a9" dataset="public.ro_person" active-filter-id="83f2e2bf-2271-44b3-82c6-8bf83f122e99">
+      <filter id="83f2e2bf-2271-44b3-82c6-8bf83f122e99" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="person_id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
     <filter-actions connection-id="de799f32-ae6f-4a41-ba2b-5bdefbe2a8a9" dataset="public.ro_marriage_certificate" active-filter-id="" />
     <filter-actions connection-id="de799f32-ae6f-4a41-ba2b-5bdefbe2a8a9" dataset="public.ro_birth_certificate" active-filter-id="" />
   </component>
