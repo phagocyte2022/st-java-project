@@ -12,7 +12,7 @@ public class Starter {
         );
 
 //        MarriageController controller = context.getBean(MarriageController.class);
-        MarriageController controller = context.getBean("controller", MarriageController.class);
-        controller.findMarriageCertificate(new MarriageRequest());
+//        MarriageController controller = context.getBean("controller", MarriageController.class);
+//        controller.findMarriageCertificate(new MarriageRequest());
     }
 }
