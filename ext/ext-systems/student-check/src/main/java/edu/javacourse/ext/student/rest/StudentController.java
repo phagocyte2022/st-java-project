@@ -19,6 +19,7 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
+    @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public List<StudentResponse> getStudentInfo(StudentRequest request){

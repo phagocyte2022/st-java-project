@@ -26,9 +26,9 @@ public class StudentServiceTest {
     @Test
     public void studentInfo() {
         StudentRequest req = new StudentRequest();
-        req.setLasttName("last");
+            req.setLastName("last");
         req.setFirstName("first");
-        req.setMiddletName("middle");
+        req.setMiddleName("middle");
         req.setDateOfBirth(LocalDate.of(2000, 04, 12));
         req.setPassportSeria("1111");
         req.setPassportNumber("222222");

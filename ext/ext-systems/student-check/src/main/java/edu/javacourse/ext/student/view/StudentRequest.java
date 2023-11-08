@@ -4,9 +4,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
 
 public class StudentRequest {
-    private String lasttName;
+    private String lastName;
     private String firstName;
-    private String middletName;
+    private String middleName;
     @XmlJavaTypeAdapter(value = LocalDateAdapter.class)
     private LocalDate dateOfBirth;
     private String passportSeria;
@@ -14,12 +14,12 @@ public class StudentRequest {
     @XmlJavaTypeAdapter(value = LocalDateAdapter.class)
     private LocalDate passportDate;
 
-    public String getLasttName() {
-        return lasttName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLasttName(String lasttName) {
-        this.lasttName = lasttName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getFirstName() {
@@ -30,12 +30,12 @@ public class StudentRequest {
         this.firstName = firstName;
     }
 
-    public String getMiddletName() {
-        return middletName;
+    public String getMiddleName() {
+        return middleName;
     }
 
-    public void setMiddletName(String middletName) {
-        this.middletName = middletName;
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
     }
 
     public LocalDate getDateOfBirth() {

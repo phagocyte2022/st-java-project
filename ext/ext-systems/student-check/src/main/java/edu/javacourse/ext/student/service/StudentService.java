@@ -24,9 +24,9 @@ public class StudentService {
     private StudentRepository studentRepository;
     @Transactional
     public List<StudentResponse> getStudentInfo(StudentRequest request){
-        List<Student> student = studentRepository.findStudent(request.getLasttName(),
+        List<Student> student = studentRepository.findStudent(request.getLastName(),
                 request.getFirstName(),
-                request.getMiddletName(),
+                request.getMiddleName(),
                 request.getDateOfBirth(),
                 request.getPassportSeria(),
                 request.getPassportNumber(),
