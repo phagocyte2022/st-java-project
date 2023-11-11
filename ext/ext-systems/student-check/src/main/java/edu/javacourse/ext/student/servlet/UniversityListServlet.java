@@ -30,6 +30,9 @@ public class UniversityListServlet extends HttpServlet {
         req.setAttribute("today", LocalDate.now().format(DateTimeFormatter.ISO_DATE));
         req.setAttribute("universities", list);
 
-        getServletContext().getRequestDispatcher("/universityList.jsp").forward(req, resp);
+//        getServletContext().getRequestDispatcher("/universityList.jsp").forward(req, resp);
+        getServletContext().getRequestDispatcher("/universityList_jstl.jsp").forward(req, resp);
+
+
     }
 }
