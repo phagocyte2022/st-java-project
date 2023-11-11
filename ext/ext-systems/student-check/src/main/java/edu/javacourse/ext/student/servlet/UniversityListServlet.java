@@ -2,7 +2,6 @@ package edu.javacourse.ext.student.servlet;
 
 import edu.javacourse.ext.student.domain.University;
 import edu.javacourse.ext.student.service.UniversityService;
-import org.springframework.stereotype.Service;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
@@ -13,6 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 @WebServlet(name = "UniversityListServlet", urlPatterns = {"/universityList"})
@@ -22,9 +23,12 @@ public class UniversityListServlet extends HttpServlet {
 
         ServletContext ctx = getServletContext();
         WebApplicationContext webCtx = WebApplicationContextUtils.getWebApplicationContext(ctx);
+
         UniversityService service = webCtx.getBean(UniversityService.class);
         List<University> list = service.findUniversities();
-        list.forEach(u -> System.out.println(u.getUniversityId()+": " + u.getUniversityName() + ": " + u.getFaculties().size()));
+
+        req.setAttribute("today", LocalDate.now().format(DateTimeFormatter.ISO_DATE));
+        req.setAttribute("universities", list);
 
         getServletContext().getRequestDispatcher("/universityList.jsp").forward(req, resp);
     }
