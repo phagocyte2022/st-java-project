@@ -1,7 +1,10 @@
 INSERT INTO sr_university (university_name) VALUES ('University One');
+INSERT INTO sr_university (university_name) VALUES ('University Two');
 
-INSERT INTO sr_faculty (university_id, faculty_name)
-                        VALUES (1, 'Faculty One');
+INSERT INTO sr_faculty (university_id, faculty_name) VALUES (1, 'Faculty One');
+INSERT INTO sr_faculty (university_id, faculty_name) VALUES (1, 'Faculty Two');
+INSERT INTO sr_faculty (university_id, faculty_name) VALUES (1, 'Faculty Other One');
+INSERT INTO sr_faculty (university_id, faculty_name) VALUES (1, 'Faculty Other Two');
 
 INSERT INTO sr_student (last_name, first_name, middle_name, date_of_birth, passport_seria, passport_number, passport_date)
                         VALUES ('last', 'first', 'middle', '2000-04-12', '1111', '222222', '2016-04-30');
