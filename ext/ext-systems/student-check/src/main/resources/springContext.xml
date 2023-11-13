@@ -1,9 +1,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:jpa="http://www.springframework.org/schema/data/jpa"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
@@ -15,9 +15,7 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-
-
-        <context:component-scan base-package="edu.javacourse.ext.student"/>
+<context:component-scan base-package="edu.javacourse.ext.student"/>
 
         <jpa:repositories base-package="edu.javacourse.ext.student"
                           entity-manager-factory-ref="emf"
@@ -52,7 +50,7 @@
         </bean>
 
         <bean id="txManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-                <property name="entityManagerFactory" ref="emf" />
+                <property name="entityManagerFactory" ref="emf"/>
         </bean>
 
         <mvc:annotation-driven/>
@@ -60,6 +58,10 @@
         <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
                 <property name="prefix" value="/"/>
                 <property name="suffix" value=".jsp"/>
+        </bean>
+
+        <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+                <property name="maxUploadSize" value="300000"/>
         </bean>
 
 </beans>
